@@ -24,7 +24,13 @@ const NotFound = (res,messege = "Not Found")=>{
     success : false,
     })
 }
+ const BadRequest = (res, message = "Bad Request") => {
+  return res.status(400).json({
+    success: false,
+    message,
+  });
+};
 
 export {
-    InternalServerError , Created , NotFound , AlreadyExist
+    InternalServerError , Created , NotFound , AlreadyExist ,BadRequest
 }

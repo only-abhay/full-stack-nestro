@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const CategorySchema = new mongoose.Schema(
     {
@@ -28,6 +28,9 @@ const CategorySchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    },
+    {
+      timestamps:true
     }
 )
 
